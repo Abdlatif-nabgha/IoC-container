@@ -1,6 +1,8 @@
 package com.nabgha.presentation;
 
 import com.nabgha.dao.DaoImp;
+import com.nabgha.dao.IDao;
+import com.nabgha.extension.DaoImplV2;
 import com.nabgha.metier.MetierImpl;
 
 /**
@@ -8,8 +10,8 @@ import com.nabgha.metier.MetierImpl;
  **/
 public class Presentation1 {
     public static void main(String[] args) {
-        DaoImp dao = new DaoImp();
-        //MetierImpl metier = new MetierImpl(dao);
-       // System.out.println(metier.calcul());
+        IDao dao = new DaoImplV2();
+        MetierImpl metier = new MetierImpl(dao);
+        System.out.println(metier.calcul());
     }
 }

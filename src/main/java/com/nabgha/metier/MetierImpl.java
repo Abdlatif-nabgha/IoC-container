@@ -5,10 +5,12 @@ import com.nabgha.dao.IDao;
 public class MetierImpl implements IMetier {
     IDao dao; // couplage faible
 
-    // Injection des dependences via le constructeur
-//    public MetierImpl(IDao dao) {
-//        this.dao = dao;
-//    }
+    public MetierImpl() {}
+    // Injection des dependences via le constructeur (Recommended)
+    public MetierImpl(IDao dao) {
+        super();
+        this.dao = dao;
+    }
 
     // Injection de dependences via setter
     public void setDao(IDao dao) {
