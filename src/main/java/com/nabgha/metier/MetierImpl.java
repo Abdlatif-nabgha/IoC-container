@@ -6,7 +6,7 @@ public class MetierImpl implements IMetier {
     IDao dao; // couplage faible
 
     // Injection des dependences via le constructeur
-    public void setDao(IDao dao) {
+    public MetierImpl(IDao dao) {
         this.dao = dao;
     }
     @Override
