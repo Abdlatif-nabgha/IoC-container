@@ -6,10 +6,11 @@ import com.nabgha.metier.MetierImpl;
 /**
  * @auther abdlatif-nabgha
  **/
-public class Presentation1 {
+public class Presentation2 {
     public static void main(String[] args) {
         DaoImp dao = new DaoImp();
-        //MetierImpl metier = new MetierImpl(dao);
-       // System.out.println(metier.calcul());
+        MetierImpl metier = new MetierImpl();
+        metier.setDao(dao);
+        System.out.println(metier.calcul());
     }
 }
