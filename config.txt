@@ -1,0 +1,3 @@
+com.nabgha.extension.DaoImplV2
+com.nabgha.metier.MetierImpl
+com.nabgha.dao.DaoImp
