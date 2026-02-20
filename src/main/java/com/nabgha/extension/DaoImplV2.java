@@ -1,10 +1,9 @@
 package com.nabgha.extension;
 
 import com.nabgha.dao.IDao;
+import org.springframework.stereotype.Component;
 
-/**
- * @auther abdlatif-nabgha
- **/
+@Component("d2")
 public class DaoImplV2 implements IDao {
     @Override
     public double getData() {

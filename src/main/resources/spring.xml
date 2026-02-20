@@ -3,11 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dao" class="com.nabgha.dao.DaoImp">
+    <bean id="dao" class="com.nabgha.extension.DaoImplV2">
     </bean>
     <bean id="metier" class="com.nabgha.metier.MetierImpl">
-        <property name="dao" ref="dao">
-        </property>
+        <constructor-arg ref="dao">
+        </constructor-arg>
     </bean>
 
 </beans>
